@@ -11,8 +11,8 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: ''
-root: /
+url: http://yoursite.com
+root: /boke/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -130,8 +130,8 @@ theme: aircloud
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-#deploy:
-#  type: git
-#  repo: your repo url
-#  branch: master
+deploy:
+  type: git
+  repo: https://github.com/rocket-oil/boke.git
+  branch: gh-pages
 
