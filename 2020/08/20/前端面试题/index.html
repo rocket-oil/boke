@@ -89,7 +89,7 @@
     </div>
     
         <div id="toc" class="toc-article">
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#网络部分"><span class="toc-text">网络部分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#框架部分"><span class="toc-text">框架部分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#前端基础"><span class="toc-text">前端基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#工程构建类"><span class="toc-text">工程构建类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#node-还在学习中。。。"><span class="toc-text">node(还在学习中。。。)</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#网络部分"><span class="toc-text">网络部分</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、http-状态码的含义"><span class="toc-text">1、http 状态码的含义</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#框架部分"><span class="toc-text">框架部分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#前端基础"><span class="toc-text">前端基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#工程构建类"><span class="toc-text">工程构建类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#node-还在学习中。。。"><span class="toc-text">node(还在学习中。。。)</span></a></li></ol>
 </div>
     
 </div>
@@ -143,8 +143,7 @@
 <p>关注主流前端技术： react  reactNative  nodejs  webpack  TypeScript  RxJs</p>
 <p>技术难点，以及项目亮点，从0到1，1到n的项目亮点</p>
 <h2 id="网络部分"><a href="#网络部分" class="headerlink" title="网络部分"></a>网络部分</h2><hr>
-<p>1、http 状态码的含义</p>
-<p>http状态码的大致含义：</p>
+<h4 id="1、http-状态码的含义"><a href="#1、http-状态码的含义" class="headerlink" title="1、http 状态码的含义"></a>1、http 状态码的含义</h4><p>http状态码的大致含义：</p>
 <p>1**： 服务器收到请求，需要客户端继续发送请求</p>
 <p>2**： 成功，操作被成功接收并处理</p>
 <p>3**： 重定向，需要进一步的操作以完成请求</p>
@@ -307,7 +306,10 @@
 <p><a href="http://www.ruanyifeng.com/blog/2015/02/mvcmvp_mvvm.html" target="_blank" rel="noopener">参考链接1</a></p>
 <p><a href="https://www.jianshu.com/p/b0aab1ffad93" target="_blank" rel="noopener">参考链接2</a></p>
 <p>8、AMD与CMD的区别</p>
-<p>1、AMD推崇依赖前置，在定义模块的时候就要声明其依赖的模块<br>2、CMD推崇就近依赖，只有在用到某个模块的时候再去require</p>
+<ul>
+<li>AMD推崇依赖前置，在定义模块的时候就要声明其依赖的模块</li>
+<li>CMD推崇就近依赖，只有在用到某个模块的时候再去require</li>
+</ul>
 <p><u>9、SSR的优缺点，以及数据在浏览器和服务器如何渲染的过程</u></p>
 <p>10、vue响应式原理</p>
 <p>vue3.0以下的实现原理：简单来说是通过数据劫持结合发布者-订阅者模式来实现的，其核心基础是通过Object.defineProperty的set和get方法实现的。详细的是：首先是将data中的数据挂载到this上，当修改data中的数据的时候，自动调用set 方法，通知收集订阅者的Dep（Dep本质上就是一个收集与存储Watcher（订阅者）的数组），Dep通过notify()函数通知订阅者watcher，watcher调用update()函数生成虚拟DOM（本质上是js对象），vnode通过diff算法比较并修改真实 DOM 中需要改的部分，最后在真实 DOM 中进行排版与重绘实现视图更新，反之view更新data通过事件监听实现的。</p>
