@@ -223,6 +223,7 @@
 </li>
 </ul>
 <p>  <a href="https://blog.fundebug.com/2019/02/28/what-happens-from-url-to-webpage/" target="_blank" rel="noopener">参考链接</a></p>
+<p><br></p>
 <h2 id="框架部分"><a href="#框架部分" class="headerlink" title="框架部分"></a>框架部分</h2><hr>
 <p>1、react 受控组件和非受控组件的区别，函数组件和class组件的区别</p>
 <table>
@@ -262,10 +263,10 @@
 <li><p>与第三方DOM库集成</p>
 </li>
 </ul>
-<p><u>2、react写组件的时候如何解耦（高阶组件）</u></p>
-<p><u>3、react父子组件以及组件间通信的几种方式</u></p>
-<p><u>4、谈谈你对react hook的理解，以及如何利用react hook对项目进行优化的</u></p>
-<p>5、组件设计的原则</p>
+<p><br><br><u>2、react写组件的时候如何解耦（高阶组件）</u></p>
+<p><br><br><u>3、react父子组件以及组件间通信的几种方式</u></p>
+<p><br><br><u>4、谈谈你对react hook的理解，以及如何利用react hook对项目进行优化的</u></p>
+<p><br><br>5、组件设计的原则</p>
 <ul>
 <li><p>松耦合（松散耦合的实体应该能够独立运行，而不依赖于其他模块，而不是受限于特定的上下文环境）</p>
 </li>
@@ -274,7 +275,7 @@
 <li><p>模块化</p>
 </li>
 </ul>
-<p>6、React、Angular、Vue.js三大框架对比，以及和 jquery的对比</p>
+<p><br><br>6、React、Angular、Vue.js三大框架对比，以及和 jquery的对比</p>
 <p>vue 和 React 的对比</p>
 <ul>
 <li>都在使用虚拟DOM</li>
@@ -298,7 +299,7 @@
 <li><p>三大框架是数据驱动视图改变的，jquery是直接操作DOM改变视图的</p>
 </li>
 </ul>
-<p>7、MVC和MVVM的区别，前端设计模式</p>
+<p><br><br>7、MVC和MVVM的区别，前端设计模式</p>
 <p>M : model, Model负责对数据进行获取及存放</p>
 <p>V: view, 视图，简单来说，就是我们在界面上看见的一切</p>
 <p>C：Controller是MVC中的数据和视图的协调者，也就是在Controller里面把Model的数据赋值给View来显示<br>（或者是View接收用户输入的数据然后由Controller把这些数据传给Model来保存到本地或者上传到<br>服务器）</p>
@@ -306,13 +307,13 @@
 <p>MVC中，C 是M和V的连接桥梁，MVVM中，弱化了C，出现了VM，负责对复杂的数据进行解析，ViewModel存在目的在于抽离Controller中展示的业务逻辑。而不是替代Controller，其它视图操作业务等还是应该放Controller中实现。</p>
 <p><a href="http://www.ruanyifeng.com/blog/2015/02/mvcmvp_mvvm.html" target="_blank" rel="noopener">参考链接1</a></p>
 <p><a href="https://www.jianshu.com/p/b0aab1ffad93" target="_blank" rel="noopener">参考链接2</a></p>
-<p>8、AMD与CMD的区别</p>
+<p><br><br>8、AMD与CMD的区别</p>
 <ul>
 <li>AMD推崇依赖前置，在定义模块的时候就要声明其依赖的模块</li>
 <li>CMD推崇就近依赖，只有在用到某个模块的时候再去require</li>
 </ul>
-<p><u>9、SSR的优缺点，以及数据在浏览器和服务器如何渲染的过程</u></p>
-<p>10、vue响应式原理</p>
+<p><br><br><u>9、SSR的优缺点，以及数据在浏览器和服务器如何渲染的过程</u></p>
+<p><br><br>10、vue响应式原理</p>
 <p>vue3.0以下的实现原理：简单来说是通过数据劫持结合发布者-订阅者模式来实现的，其核心基础是通过Object.defineProperty的set和get方法实现的。详细的是：首先是将data中的数据挂载到this上，当修改data中的数据的时候，自动调用set 方法，通知收集订阅者的Dep（Dep本质上就是一个收集与存储Watcher（订阅者）的数组），Dep通过notify()函数通知订阅者watcher，watcher调用update()函数生成虚拟DOM（本质上是js对象），vnode通过diff算法比较并修改真实 DOM 中需要改的部分，最后在真实 DOM 中进行排版与重绘实现视图更新，反之view更新data通过事件监听实现的。</p>
 <p>Vue3.0以上的实现原理：采用了Proxy</p>
 <p>Object.defineProperty与Proxy的对比</p>
@@ -324,7 +325,7 @@
 <li><p>Proxy不仅可以代理对象，还可以代理数组。还可以代理动态增加的属性。</p>
 </li>
 </ol>
-<p>11、虚拟DOM原理以及diff算法的原理</p>
+<p><br><br>11、虚拟DOM原理以及diff算法的原理</p>
 <p>Virual DOM是用JS对象记录一个dom节点的副本，当dom发生更改时候，先用虚拟dom进行diff，算出最小差异，然后再修改真实dom。vue的virtual dom的diff算法是基于snabbdom算法改造而来，与react的diff算法一样<br>仅在同级的vnode间做diff，递归的进行同级vnode的diff，最终实现整个DOM树的更新。</p>
 <p>缺点：</p>
 <ul>
@@ -336,7 +337,7 @@
 <p><a href="https://efe.baidu.com/blog/the-inner-workings-of-virtual-dom/" target="_blank" rel="noopener">参考链接1</a></p>
 <p><a href="https://www.cxymsg.com/guide/virtualDom.html#virtual-dom的关键要素" target="_blank" rel="noopener">参考链接2</a></p>
 <p>diff算法会调用名为patch的函数，在调用updateChildren方法的过程中触发，判断是否是同一个节点，比较只会在同层级进行, 不会跨层级比较，比较的原理是通过指针对对象进行头头，头尾，尾尾，尾头四个维度的比较，将指针从对象的两端向对象的中间不断靠拢，过程中将对同一节点的元素进行打补丁，到最后发现新数组有剩余还是老数组有剩余，如果是新数组有剩余，那么那些剩余的元素将是被创建的元素。</p>
-<p>12、虚拟DOM的优势</p>
+<p><br><br>12、虚拟DOM的优势</p>
 <p>「Virtual Dom 的优势」其实这道题目面试官更想听到的答案不是上来就说「直接操作/频繁操作 DOM 的性能差」，如果DOM操作的性能如此不堪，那么 jQuery 也不至于活到今天。所以面试官更想听到 VDOM 想解决的问题以及为什么频繁的 DOM 操作会性能差。</p>
 <p>首先我们需要知道：</p>
 <ul>
@@ -354,24 +355,24 @@
 </li>
 </ul>
 <p>  <a href="https://github.com/mqyqingfeng/frontend-interview-question-and-answer/issues/3" target="_blank" rel="noopener">参考链接</a></p>
-<p>13、nextTick()实现原理（需要修正）</p>
+<p><br><br>13、nextTick()实现原理（需要修正）</p>
 <p>vue用异步队列的方式来控制DOM更新和nextTick回调先后执行，微任务因为其高优先级特性，能确保队列中的微任务在一次事件循环前被执行完毕，但因为兼容性问题，vue不得不做了微任务向宏任务的降级方案，采用setTimeout()将回调函数包裹，确保在uiRender后执行，从而能获取到DOM。</p>
-<p>14、vue双向绑定的原理（需要深入）</p>
+<p><br><br>14、vue双向绑定的原理（需要深入）</p>
 <p>Vue 中双向绑定是一个指令v-model，vue是单向数据流，v-model只是语法糖，默认情况下相当于:value和@input，一般用在表单项上，减少大量事件处理代码，提高研发效率，其核心原理是包含v-model模板的组件渲染函数，发现它会被转换成value属性的绑定及一个事件监听，事件回调函数中会做相应变量更新操作。</p>
-<p>15、vue3.0的新特性及react16的新特性</p>
-<p>16、vue指令的原理</p>
-<p>17、vue computed和watch的区别</p>
+<p><br><br>15、vue3.0的新特性及react16的新特性</p>
+<p><br><br>16、vue指令的原理</p>
+<p><br><br>17、vue computed和watch的区别</p>
 <ul>
 <li>computed主要用于对同步数据的处理，watch则主要用于观测某个值的变化去完成一段开销较大的复杂业务逻辑</li>
 <li>computed是具有缓存的，watch是没有缓存的</li>
 </ul>
-<p>18、vue2.x中针对数组在通过下标改变数据时的双向绑定失效的情况，如何解决</p>
+<p><br><br>18、vue2.x中针对数组在通过下标改变数据时的双向绑定失效的情况，如何解决</p>
 <ul>
 <li>可以使用Vue.nextTick</li>
 <li>可以使用Vue.set</li>
 </ul>
-<p>19、Vuex、Flux、Redux、Redux-saga、Dva、MobX的区别</p>
-<p>20、前端性能优化或者前端首屏优化方案（未完待续。。。）</p>
+<p><br><br>19、Vuex、Flux、Redux、Redux-saga、Dva、MobX的区别</p>
+<p><br><br>20、前端性能优化或者前端首屏优化方案（未完待续。。。）</p>
 <ul>
 <li><p>使用 <a href="https://github.com/google/brotli" target="_blank" rel="noopener">Brotli</a> 或 Zopfli 进行纯文本压缩，开启Gzip</p>
 </li>
@@ -395,7 +396,7 @@
 <p><a href="https://juejin.im/post/5c46cbaee51d453f45612a2c" target="_blank" rel="noopener">参考链接</a></p>
 </li>
 </ul>
-<p>21、什么是函数式编程</p>
+<p><br><br>21、什么是函数式编程</p>
 <p>函数式编程是一种编程范式，就是如何编写程序的方法论。它属于<a href="http://en.wikipedia.org/wiki/Structured_programming" target="_blank" rel="noopener">“结构化编程”</a>的一种，<strong>主要思想是把运算过程尽量写成一系列嵌套的函数调用</strong>。</p>
 <p>特点：</p>
 <ul>
@@ -407,71 +408,72 @@
 </ul>
 <p><a href="http://www.ruanyifeng.com/blog/2012/04/functional_programming.html" target="_blank" rel="noopener">参考链接</a></p>
 <p><strong>函数柯里化就是函数式编程的一种体现</strong></p>
-<p>22、vue3.0以下对数组如何监听数据双向绑定的</p>
+<p><br><br>22、vue3.0以下对数组如何监听数据双向绑定的</p>
 <p>在Vue2.x中数组变化监听的问题，其实不是Object.defineProperty方法监听不到，而是为了性能和收益比例综合考虑之下，改变了监听方式，<strong>从原本的直接监听结果变化这种思路变换到监听会导致结果变化的方法上</strong>，也就上面所提到的对数组的重写（重写的方法： push，pop，shift，unshift，splice, sort，reverse这七个）。</p>
 <p>而Vue3.0中利用Proxy的方式则完美解决了2.0中出现的问题。</p>
 <p><a href="https://juejin.im/post/5e778c71518825491d3240fd" target="_blank" rel="noopener">参考链接</a></p>
-<p>23、redux的数据流向</p>
+<p><br><br>23、redux的数据流向</p>
 <ul>
 <li>dispatch(action)</li>
 <li>Reducer -&gt; newState</li>
 <li>Subscribe触发通知</li>
 </ul>
-<p>24、redux中纯函数和副作用指的是什么</p>
+<p><br><br>24、redux中纯函数和副作用指的是什么</p>
 <p>纯函数： reducer</p>
 <p>redux中没有副作用，但是它提供一个中间件机制，让用户去开发副作用处理的中间件。很多优秀的中间件也随着出现，如redux-thunk、redux-promise、redux-saga等</p>
-<p>25、RN 的热更新原理</p>
+<p><br><br>25、RN 的热更新原理</p>
 <p>RN热更新的根本原理就是更换bundle.js文件，并重新加载</p>
-<p>26、redux的工作原理</p>
-<p>27、RN和native的通信方式</p>
+<p><br><br>26、redux的工作原理</p>
+<p><br><br>27、RN和native的通信方式</p>
 <p>方法1: 原生定义桥接，RN里通过NativeModules 引用定义的桥接，然后使用Promise方式调桥接里的方法就可以了</p>
 <p>方法2: 原生中发通知，RN监听通知</p>
 <p>两种方式的应用场景不一样，比如 原生要执行一个长时间任务，执行完了通知你就好了，这个时候通知会好点，还比如Native 收到推送通知，你不知道什么时候会收到，这时让他收到了就发个通知就好了，一些方法需要尽快拿到返回，回调就合适点</p>
-<p>28、 react中setState中为什么要使用不可变值 </p>
+<p><br><br>28、 react中setState中为什么要使用不可变值 </p>
 <p>如果在setState中更改了值，那么就会在shouldComponentUpdate中出现BUG，nextProps会和this.props，以及nextState和this.state会一样，就会在shouldComponentUpdate返回false，不渲染。</p>
-<p>29、setState是同步的还是异步的，为什么不能同步更新</p>
+<p><br><br>29、setState是同步的还是异步的，为什么不能同步更新</p>
 <p>直接使用setState是异步更新，同步回调，在自定义的DOM事件中，或者setTimeout中setState中是同步的。</p>
 <p>源码中enqueueSetState将state放入队列中，并调用enqueueUpdate处理要更新的Component，其核心是队列和事务。</p>
 <p><a href="https://segmentfault.com/a/1190000015463599?utm_source=tag-newest" target="_blank" rel="noopener">参考链接</a></p>
-<p>30、react中setState为什么会再次render</p>
-<p>31、react中componentWillUnmount中做了哪些事</p>
+<p><br><br>30、react中setState为什么会再次render</p>
+<p><br><br>31、react中componentWillUnmount中做了哪些事</p>
 <ul>
 <li>销毁自定义事件</li>
 <li>销毁DOM事件</li>
 <li>销毁定时器</li>
 </ul>
-<p>32、react 如何调用 redux，react-redux  ?</p>
+<p><br><br>32、react 如何调用 redux，react-redux  ?</p>
 <p>通过Provider和Connect实现调用</p>
-<p>33、redux action如何处理异步</p>
+<p><br><br>33、redux action如何处理异步</p>
 <p>引入以下三个中的任意一个中间件，做代码的改变</p>
 <ul>
 <li>redux-thunk</li>
 <li>redux-promise</li>
 <li>redux-saga</li>
 </ul>
-<p>34、react 中event是原生事件吗？为什么</p>
+<p><br><br>34、react 中event是原生事件吗？为什么</p>
 <ul>
 <li>event是SyntheticEvent，模拟出DOM事件的所有能力</li>
 <li>event.nativeEvent 是原生事件对象</li>
 <li>所有事件都被挂载到document上</li>
 <li>和DOM事件不一样，和VUE 事件也不一样</li>
 </ul>
-<p>35、react JSX的本质是什么，vue的template的本质是什么</p>
+<p><br><br>35、react JSX的本质是什么，vue的template的本质是什么</p>
 <p>vue的template编译成一个render函数，render函数执行返回vnode，最后通过patch更新真实node，注意template不是HTML。</p>
 <p>React JSX的本质是通过React.createElement(即h函数)编译成一个函数，返回vnode，最后通过patch更新真实node。</p>
-<p>36、vue 中的router和route的区别 </p>
-<p>37、React Native APP启动流程简单说下</p>
+<p><br><br>36、vue 中的router和route的区别 </p>
+<p><br><br>37、React Native APP启动流程简单说下</p>
+<p><br></p>
 <h2 id="前端基础"><a href="#前端基础" class="headerlink" title="前端基础"></a>前端基础</h2><hr>
 <p><u>1、二叉树求最短深度</u></p>
-<p><u>2、实现一个方法 [[1,2],[2,3],[1,2,4]]取交集，放到一个数组中</u></p>
-<p><u>3、如何实现一个骨架屏</u></p>
-<p><u>4、如何实现一个serviceWorker</u></p>
-<p><u>5、谈谈你对PWA的理解</u></p>
-<p><u>6、js异步加载的方式</u></p>
-<p><u>7、资源预加载preload和资源预读取prefetch的区别，以及js同步加载和异步加载的区别</u></p>
-<p>8、前端重绘与重排触发的场景，以及哪个性能消耗大</p>
+<p><br><br><u>2、实现一个方法 [[1,2],[2,3],[1,2,4]]取交集，放到一个数组中</u></p>
+<p><br><br><u>3、如何实现一个骨架屏</u></p>
+<p><br><br><u>4、如何实现一个serviceWorker</u></p>
+<p><br><br><u>5、谈谈你对PWA的理解</u></p>
+<p><br><br><u>6、js异步加载的方式</u></p>
+<p><br><br><u>7、资源预加载preload和资源预读取prefetch的区别，以及js同步加载和异步加载的区别</u></p>
+<p><br><br>8、前端重绘与重排触发的场景，以及哪个性能消耗大</p>
 <p>重排消耗性能更大，触发重排的场景：重排是指当DOM的变化影响了元素的几何属性（宽或高）的情况，比如：添加、删除可见的dom；元素的位置改变；元素的尺寸改变(外边距、内边距、边框厚度、宽高、等几何属性)；页面渲染初始化；浏览器窗口大小改变等。重绘是指当元素的一部分属性发生改变，如外观、背景、颜色等不会引起布局变化，只需要浏览器根据元素的新属性重新绘制，使元素呈现新的外观。</p>
-<p>9、什么时候会导致js内存泄漏，以及如何快速定位</p>
+<p><br><br>9、什么时候会导致js内存泄漏，以及如何快速定位</p>
 <p>ES6 推出了两种新的数据结构：<a href="http://es6.ruanyifeng.com/#docs/set-map#WeakSet" target="_blank" rel="noopener">WeakSet</a> 和 <a href="http://es6.ruanyifeng.com/#docs/set-map#WeakMap" target="_blank" rel="noopener">WeakMap</a>。它们对于值的引用都是不计入垃圾回收机制的，所以名字里面才会有一个”Weak”，表示这是弱引用。</p>
 <p>导致js内存泄漏的常见4种情况：</p>
 <ul>
