@@ -464,7 +464,7 @@
 <p><br><br>37、React Native APP启动流程简单说下</p>
 <p><br></p>
 <h2 id="前端基础"><a href="#前端基础" class="headerlink" title="前端基础"></a>前端基础</h2><hr>
-<p><u>1、二叉树求最短深度</u></p>
+<p><br><br><u>1、二叉树求最短深度</u></p>
 <p><br><br><u>2、实现一个方法 [[1,2],[2,3],[1,2,4]]取交集，放到一个数组中</u></p>
 <p><br><br><u>3、如何实现一个骨架屏</u></p>
 <p><br><br><u>4、如何实现一个serviceWorker</u></p>
@@ -493,7 +493,7 @@
 </ul>
 <p>如何快速地定位js 内存溢出：</p>
 <p>可以使用chrome的分析工具chrome devtools中的performance中的memory分析</p>
-<p>10、nodejs 和es6中的import 和export的区别</p>
+<p><br><br>10、nodejs 和es6中的import 和export的区别</p>
 <ol>
 <li>CommonJS 模块输出的是一个值的拷贝，ES6 模块输出的是值的引用。</li>
 <li>CommonJS 模块是运行时加载，ES6 模块是编译时输出接口。</li>
@@ -501,18 +501,18 @@
 <li>CommonJs 是动态语法可以写在判断里，ES6 Module 静态语法只能写在顶层</li>
 <li>CommonJs 的 this 是当前模块，ES6 Module的 this 是 undefined</li>
 </ol>
-<p>11、serviceWorker的生命周期及工作原理</p>
+<p><br><br>11、serviceWorker的生命周期及工作原理</p>
 <p>生命周期： 安装中，安装后，激活中，激活后，废弃</p>
 <p>工作原理：Service Worker 是一种独立于浏览器主线程的 <strong>工作线程</strong></p>
-<p>12、如何选择图片格式</p>
-<p>13、new一个对象的过程</p>
+<p><br><br>12、如何选择图片格式</p>
+<p><br><br>13、new一个对象的过程</p>
 <ol>
 <li>创建一个空的<code>JavaScript</code> 对象<code>{}</code></li>
 <li>将创建的对象作为其调用上下文，使用<code>this</code>来引用这个对象</li>
 <li>将创建的对象的 <code>__proto__</code>指向构造函数的<code>prototype</code></li>
 <li>如果构造函数返回的是一个对象就返回对象，否则返回<code>this</code></li>
 </ol>
-<p>14、原型与原型链的区别，作用域和作用域链的区别，执行上下文和作用域的区别</p>
+<p><br><br>14、原型与原型链的区别，作用域和作用域链的区别，执行上下文和作用域的区别</p>
 <ul>
 <li><p>原型与原型链的区别</p>
 <p>原型（比如：Person.prototype）就是一个对象，实例“继承”那个对象的属性；原型链是主要通过<code>__proto__</code>去寻找到Object的构造函数Function，这个搜索的过程形成的链状关系就是原型链。</p>
@@ -527,7 +527,7 @@
 <p><strong>执行上下文在运行时确定，随时可能改变；作用域在定义时就确定，并且不会改变</strong>。</p>
 </li>
 </ul>
-<p>15、事件委托、冒泡、捕获</p>
+<p><br><br>15、事件委托、冒泡、捕获</p>
 <ul>
 <li><p>target 与 currentTarget的区别</p>
 <p>target: 事件触发的实际元素，比如：当前被点击的实际元素</p>
@@ -540,16 +540,16 @@
 </li>
 </ul>
 <p>  <a href="https://www.jianshu.com/p/51c90f074c4d" target="_blank" rel="noopener">学习参考链接</a>        </p>
-<p>16、实现一个优雅的事件委托</p>
-<p>17、promise的原理以及与async , await 的比较</p>
-<p>18、GC垃圾回收机制中的新生代算法与老生代算法</p>
+<p><br><br>16、实现一个优雅的事件委托</p>
+<p><br><br>17、promise的原理以及与async , await 的比较</p>
+<p><br><br>18、GC垃圾回收机制中的新生代算法与老生代算法</p>
 <p>V8中会把堆内存分为两个区域：新生代和老生代区域</p>
 <p>新生代区域： 存放时间短的对象，通常只有1～8M的容量，用副垃圾回收器负责垃圾回收</p>
 <p>老生代区域： 存放时间久的对象，内存容量较大，用主垃圾回收器负责垃圾回收</p>
 <p>新生代中用 Scavenge 算法来处理。所谓 Scavenge 算法，是把新生代空间对半划分为两个区域，一半是对象区域，一半是空闲区域，新加入的对象都会存放到对象区域，当对象区域快被写满时，就需要执行一次垃圾清理操作，在垃圾回收过程中，首先要对对象区域中的垃圾做标记；标记完成之后，就进入垃圾清理阶段，副垃圾回收器会把这些存活的对象复制到空闲区域中，同时它还会把这些对象有序地排列起来，完成复制后，对象区域与空闲区域进行角色翻转。</p>
 <p>主垃圾回收器是采用标记 - 清除（Mark-Sweep）的算法进行垃圾回收的，即遍历一组根元素，在这个遍历过程中，能到达的元素称为活动对象，没有到达的元素就可以判断为垃圾数据，然后清除垃圾数据，最后采用标记 - 整理（Mark-Compact）算法（即让所有存活的对象都向一端移动，然后直接清理掉端边界以外的内存）清除不连续的内存碎片。</p>
-<p>19、js如何实现继承的</p>
-<p>20、cookie有哪些属性</p>
+<p><br><br>19、js如何实现继承的</p>
+<p><br><br>20、cookie有哪些属性</p>
 <blockquote>
 <ol>
 <li>name</li>
@@ -564,7 +564,7 @@
 <li>priority</li>
 </ol>
 </blockquote>
-<p>21、堆内存与栈内存的区别</p>
+<p><br><br>21、堆内存与栈内存的区别</p>
 <ul>
 <li><p>栈是一种后入先出（LIFO last-in-first-out）的数据结构，是一种线性表结构，堆常用的就是二叉堆，其实就是完全二叉树，一种非线性表结构。</p>
 </li>
@@ -574,25 +574,26 @@
 </li>
 </ul>
 <p>  <a href="https://juejin.im/post/5d116a9df265da1bb47d717b" target="_blank" rel="noopener">参考学习链接</a></p>
-<p>22、json与xml的区别</p>
+<p><br><br>22、json与xml的区别</p>
 <ul>
 <li>XML文件庞大，文件格式复杂，传输占带宽；json数据格式比较简单，易于读写，格式都是压缩的，占用带宽小；</li>
 <li>客户端不同浏览器之间解析XML的方式不一致，需要重复编写很多代码；</li>
 <li>xml可读性较好<br><a href="https://www.cnblogs.com/sanmaospace/p/3139186.html" target="_blank" rel="noopener">参考链接</a></li>
 </ul>
-<p>23、promise如何处理全局错误</p>
+<p><br><br>23、promise如何处理全局错误</p>
 <p>Promise.allSettled()</p>
-<p>24、BFC:   是独立的一块布局区域, 是用于<strong>布局块级盒子的一块渲染区域</strong>。并且与这个区域的外部毫无关系。</p>
+<p><br><br>24、BFC:   是独立的一块布局区域, 是用于<strong>布局块级盒子的一块渲染区域</strong>。并且与这个区域的外部毫无关系。</p>
 <p>● <strong>触发BFC的条件</strong><br>满足下列条件之一就可以触发BFC</p>
 <p>1：根元素，即html元素<br>2：float的值不为none<br>3：overflow的值不为visible<br>4：display的值为inline-block、table-cell、table-caption<br>5：position的值为absolute或者fixed</p>
 <p>● <strong>BFC的作用:</strong></p>
 <p><strong>1：可以阻止元素被浮动的元素覆盖（可做两栏布局自适应）</strong>: 给当前元素加BFC</p>
 <p><strong>2: 可以清除浮动</strong>: 给父级设置 BFC, 如overflow: hidden;</p>
 <p><strong>3：解决同一个BFC区域的垂直方向margin塌陷的问题</strong>:  给下面盒子外面设置BFC, 如overflow: hidden;</p>
-<p>25、谈谈懒加载和预加载的原理</p>
-<p>26、用栈的思维寻找数组中重复的元素和次数，输出示例： { 元素： 重复次数 } </p>
+<p><br><br>25、谈谈懒加载和预加载的原理</p>
+<p><br><br>26、用栈的思维寻找数组中重复的元素和次数，输出示例： { 元素： 重复次数 } </p>
+<p><br></p>
 <h2 id="工程构建类"><a href="#工程构建类" class="headerlink" title="工程构建类"></a>工程构建类</h2><hr>
-<p>1、PostCss的用处</p>
+<p><br><br>1、PostCss的用处</p>
 <ul>
 <li><a href="https://github.com/postcss/autoprefixer" target="_blank" rel="noopener">Autoprefixer</a> 浏览器兼容的前缀添加</li>
 <li><a href="https://preset-env.cssdb.org/" target="_blank" rel="noopener">PostCSS Preset Env</a>  支持未来的css特性</li>
@@ -600,7 +601,7 @@
 <li>通过使用 <a href="http://stylelint.io/" target="_blank" rel="noopener">stylelint 强化一致性约定并避免样式表中的错误</a>，stylelint 是一个现代化 CSS 代码检查工具。它支持最新的 CSS 语法，包括类似 CSS 的语法，例如 SCSS </li>
 <li><a href="https://github.com/peterramsing/lost" target="_blank" rel="noopener">LostGrid</a> 利用 calc() 和你所定义的分割方式来创建网格系统，无需传递大量参数</li>
 </ul>
-<p>2、Webpack打包优化方案，如何提高Webpack打包速度，以及加快打包速度的原理</p>
+<p><br><br>2、Webpack打包优化方案，如何提高Webpack打包速度，以及加快打包速度的原理</p>
 <p>提高webpack的打包速度的几种常见方法：</p>
 <ul>
 <li>使用监听模式或热更新替换</li>
@@ -612,36 +613,37 @@
 <li>使用CommonsChunkPlugin提取公共的模块</li>
 <li>使用<a href="https://github.com/amireh/happypack" target="_blank" rel="noopener">HappyPack</a>会采用多进程去打包构建，使用方式还是蛮简单的，但并不是支持所有的loader</li>
 </ul>
-<p>3、webpack的loaders和plugins的区别？</p>
+<p><br><br>3、webpack的loaders和plugins的区别？</p>
 <p>loader，它是一个转换器，将A文件进行编译成B文件，比如：less-loader将A.less转换为A.css，单纯的文件转换过程。</p>
 <p>plugin是一个扩展器，它丰富了webpack本身，针对是loader结束后，webpack打包的整个过程，它并不直接操作文件，而是基于事件机制工作，会监听webpack打包过程中的某些节点，执行广泛的任务，比如：<code>UglifyJsPlugin</code>，压缩和混淆代码。</p>
-<p>4、webpack  bable-loader的原理（未完待续。。。）</p>
+<p><br><br>4、webpack  bable-loader的原理（未完待续。。。）</p>
 <p>loader 支持链式传递。链中的每个 loader 会将转换应用在已处理过的资源上。一组链式的 loader 将按照相反的顺序执行。链中的第一个 loader 将其结果（也就是应用过转换后的资源）传递给下一个 loader，依此类推。最后，链中的最后一个 loader，返回 webpack 期望 JavaScript。每一个Loader其实返回值就是一个Function，而且就是把待转换内容传入，得到转换后的内容。</p>
-<p>5、webpack如何配置多入口</p>
-<p>6、module, chunk , bundle的区别</p>
+<p><br><br>5、webpack如何配置多入口</p>
+<p><br><br>6、module, chunk , bundle的区别</p>
 <ul>
 <li>module 是各个源码文件，webpack中一切皆模块</li>
 <li>chunk  是多模块合并成的，如entry, import(), splitChunk</li>
 <li>bundle是最终的输出文件</li>
 </ul>
-<p>7、webpack优化构建速度</p>
+<p><br><br>7、webpack优化构建速度</p>
 <ul>
 <li>优化bable-loader, 加上cacheDirectory开启缓存，加上include明确范围</li>
 <li>用IgnorePlugin忽略无用组件</li>
 <li>用happyPack开启多进程打包，用ParallelUglifyPlugin多进程压缩js</li>
 <li>Dllplugin</li>
 </ul>
-<p>8、webpack 分模块打包的原理 </p>
-<p>9、假设有webpack 500个插件， 要求不在初始化中加载，在业务中按需加载，请问该怎么实现</p>
+<p><br><br>8、webpack 分模块打包的原理 </p>
+<p><br><br>9、假设有webpack 500个插件， 要求不在初始化中加载，在业务中按需加载，请问该怎么实现</p>
+<p><br></p>
 <h2 id="node-还在学习中。。。"><a href="#node-还在学习中。。。" class="headerlink" title="node(还在学习中。。。)"></a>node(还在学习中。。。)</h2><hr>
-<p>1、nodejs是单线程还是多线程的</p>
+<p><br><br>1、nodejs是单线程还是多线程的</p>
 <p>nodejs是单线程的。它在自身的javascript运行环境中是单线程的，但是它可以实现异步非阻塞的IO，它是把需要做的把需要做的I/O交给libuv，自己马上返回做别的事情，然后libuv在指定的时刻回调就行了。</p>
-<p>2、进程是系统进行资源分配和调度的<strong>基本单位</strong>，是操作系统结构的基础，进程是线程的<strong>容器</strong>，一个进程就是程序的运行实例</p>
-<p>3、守护进程运行在后台不受终端影响，比如一些定时任务</p>
-<p>4、什么是 IPC 通信，如何建立 IPC 通信？什么场景下需要用到 IPC 通信？</p>
+<p><br><br>2、进程是系统进行资源分配和调度的<strong>基本单位</strong>，是操作系统结构的基础，进程是线程的<strong>容器</strong>，一个进程就是程序的运行实例</p>
+<p><br><br>3、守护进程运行在后台不受终端影响，比如一些定时任务</p>
+<p><br><br>4、什么是 IPC 通信，如何建立 IPC 通信？什么场景下需要用到 IPC 通信？</p>
 <p>IPC (Inter-process communication) ，即进程间通信技术，由于每个进程创建之后都有自己的独立地址空间，实现 IPC 的目的就是为了进程之间资源共享访问，实现 IPC 的方式有多种：管道、消息队列、信号量、Domain Socket，Node.js 通过 pipe.js来实现。</p>
-<p>5、父进程创建子进程之后，父进程退出了，但是父进程对应的一个或多个子进程还在运行，这些子进程会被系统的 init 进程收养，对应的进程 pid 为 1，这就是孤儿进程</p>
-<p>6、RPC（Remote Procedure Call）远程过程调用，简单的理解是一个节点请求另一个节点提供的服务，由注册中心，client, server 组成。</p>
+<p><br><br>5、父进程创建子进程之后，父进程退出了，但是父进程对应的一个或多个子进程还在运行，这些子进程会被系统的 init 进程收养，对应的进程 pid 为 1，这就是孤儿进程</p>
+<p><br><br>6、RPC（Remote Procedure Call）远程过程调用，简单的理解是一个节点请求另一个节点提供的服务，由注册中心，client, server 组成。</p>
 
         
         <br />
